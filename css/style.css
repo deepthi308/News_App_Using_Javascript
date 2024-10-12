@@ -1,0 +1,226 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Root Variables */
+:root {
+  --COLOR-CYAN: #00d5ffb3;
+  --COLOR-BLUE: #000026;
+  --COLOR-WHITE: rgb(213, 212, 212);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--COLOR-BLUE);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  flex: 1;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  background-color: var(--COLOR-BLUE);
+  position: sticky;
+}
+
+.header {
+  flex: 7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--COLOR-CYAN);
+}
+
+.brand-name {
+  text-shadow: 0px 1px 2px var(--COLOR-CYAN);
+  cursor: pointer;
+}
+
+.skript {
+  color: var(--COLOR-WHITE);
+}
+
+.search-container {
+  flex: 3;
+  min-width: 250px;
+  display: flex;
+}
+
+.search-input {
+  flex: 9;
+  outline: none;
+  border: none;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border: 0.1rem solid var(--COLOR-BLUE);
+  padding-left: 1rem;
+  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--COLOR-BLUE);
+  background-color: var(--COLOR-WHITE);
+}
+
+.search-button {
+  flex: 1;
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-top: 0.1rem solid var(--COLOR-BLUE);
+  border-right: 0.1rem solid var(--COLOR-BLUE);
+  border-bottom: 0.1rem solid var(--COLOR-BLUE);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: var(--COLOR-CYAN);
+  color: var(--COLOR-BLUE);
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-button:hover {
+  transform: scale(0.95);
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero {
+  flex: 8;
+  background: linear-gradient(
+    139deg,
+    rgba(0, 192, 255, 1) 0%,
+    rgba(0, 88, 171, 1) 32%,
+    rgba(0, 2, 78, 1) 80%
+  );
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.news-container {
+  color: var(--COLOR-CYAN);
+  background-color: VAR(--COLOR-BLUE);
+  height: max-content;
+  min-height: 16rem;
+  width: 21rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 6px var(--COLOR-CYAN);
+  transition: all 0.2s ease-in-out;
+}
+
+.news-container:hover {
+  transform: scale(1.02);
+}
+
+.news-top {
+  height: 10rem;
+  overflow: hidden;
+}
+
+.news-top img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.news-bottom {
+  padding: 1rem;
+}
+
+.news-bottom::-webkit-scrollbar {
+  display: none;
+}
+
+.news-title {
+  color: var(--COLOR-CYAN);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.news-description {
+  /* text-align: justify; */
+  font-size: 0.8rem;
+  color: var(--COLOR-WHITE);
+}
+
+.footer {
+  flex: 1;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--COLOR-CYAN);
+}
+
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.author {
+  text-decoration: underline;
+}
+
+.readmore {
+  display: inline;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  float: right;
+  border: 0.11rem solid var(--COLOR-CYAN);
+  background-color: var(--COLOR-BLUE);
+  color: var(--COLOR-CYAN);
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.readmore:hover {
+  background-color: var(--COLOR-CYAN);
+  color: var(--COLOR-BLUE);
+}
+
+.readmore:active {
+  transform: scale(0.9);
+}
+
+/* Responsive Design */
+
+@media (max-width: 500px) {
+  .header {
+    display: none;
+  }
+
+  .search-container {
+    flex: 10;
+  }
+}
